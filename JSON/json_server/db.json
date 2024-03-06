@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Kiên thức cơ bản FE, BE",
+      "description": "Tổng quan"
+    },
+    {
+      "name": "Xây dựng Web với NodeJS & Express Phần 2",
+      "description": "Rất dễ hiểu và hay",
+      "id": 2
+    }
+  ]
+}

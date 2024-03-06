@@ -1,0 +1,320 @@
+- console.log(fullName);
+// consolde.warn() : in ra dấu tam giác vàng
+// console.error() : in dấu tích đỏ lỗi
+- //confirm('Xac nhan du tuoi'); 
+- //prompt("Xac nhan du tuoi");
+- // cho doan code chay sau 1 khoang thoi gian mili giay
+setTimeout(function () {
+    alert('Thong bao')
+}, 1000);
+
+- // thuc thi lien tuc, cach 1 s chay 1 lan
+setInterval(function () {	
+    console.log('Day la log')
+}, 1000);
+
+
+---------------------------------------------------------------------------------------------
+// ----- B2 Toan tu so hoc, gan, ss, logic
+// var a = 1 + 2;
+// console.log(a);
+// var FullName = 'Giang';
+// var a = 1;
+// var b = 2;
+// ss
+// if (a < b) {
+//     alert('dung');
+// }
+//logic
+// if (a > 0 && b > 0) {
+//     alert('a & b lon hon 0');
+// }
+
+
+
+---------------------------------------------------------------------------------------------
+// ----------------B3. Kieu du lieu
+// Number type 
+// var a = 1;
+
+// // string type
+// var fullName = 'giang';
+// // Boolean
+// var isSuccess = true; 
+
+// // Symbol
+// var id = Symbol('id');
+// // Function
+// var myFunction = function() {
+//     alert('Hello');
+// }
+// // myFunction();
+
+// //  object types: chua nhieu dang du lieu
+// var myObject = {
+//     name: 'giang',
+//     age: 18,
+//     adress: 'Ha Noi',
+//     myFunction: function () {
+
+//     }
+// };
+// console.log('myObject', myObject);
+
+// var myArray = [
+//     'java',
+//     'phb',
+//     'ruby'
+// ];
+// // Kiem tra kieu du lieu la gi
+// console.log(typeof a);
+
+
+// 0, false, '' "", undefined, NaN, null
+
+// Đọc từ trái qua phải ko nằm trong 6 giá trị trên
+// thì đọc tiếp sang phải nếu vẫn ko có 6 gtri trên thì in ra kq bên phải cuối
+// Nếu gặp 1 trong 6 gtri tren thi in luôn giá trị đấy
+// or thì gặp đầu tiên phát in gtri đấy luôn
+//  ko cần quan tâm 6 gtri kia
+// var result = 'A' && 'B' && 'C';
+// console.log(result); // in ra C
+
+
+
+---------------------------------------------------------------------------------------------
+// --------------B5 Chuỗi
+var Fullname = 'Giang hoàng';
+var name1 = 'HaHa';
+
+// console.log(`Toi la: ${Fullname} ${name1}`);
+// Lam viec voi chuoi
+var myString = 'Hoc JS tai JS Day';
+// 1.Length 
+// console.log(myString.length);
+// 2.Find index Tim vi tri cua 1 ki tu trong 1 chuoi
+// console.log(myString.indexOf('JS', 5));
+// console.log(myString.lastIndexOf('JS'));
+// console.log(myString.search('JS'));
+
+// 3.Cut string 
+// console.log(myString.slice(4,6))
+// console.log(myString.slice(4))  
+// console.log(myString.slice(-3))
+
+// 4.Replace
+// console.log(myString.replace('JS', 'script'))
+// tìm tat ca
+// console.log(myString.replace(/JS/g, 'script'))
+
+// 5. To Upper case
+// console.log(myString.toUpperCase())
+// 6. To lower case
+// console.log(myString.toLowerCase())
+
+// 7.Trim
+// console.log(myString.trim())
+
+// 8.Split
+// var languae = 'JV, PHP, ruby';
+// var languae2 = 'Javascript';
+
+// console.log(languae.split(', '))
+// console.log(languae2.split(''))
+
+// 9. Get a character by index: Tìm xem vị trí là chữ gì
+// const myString2 = 'Giang H';
+// console.log(myString2.charAt(0))
+// C2
+// console.log(myString2[1])
+
+// Bài tập
+function getContentLength(content) {
+    return content.length;
+}
+
+console.log(getContentLength('JavaScript'));
+console.log(getContentLength('Hello World'));
+// B2
+var coursesStr = 'HTML & CSS, JavaScript, ReactJS';
+function strToArray(str) {
+    var arr = str.split(', ');
+    return arr;
+}
+// Expected results
+console.log(strToArray(coursesStr)) 
+
+
+Lam viec voi so 
+- Number.isFinite() : Xác định xem giá trị đã cho có phải là số hữu hạn hay không. Trả về boolean
+- Number.isInteger() : Xác định xem giá trị đã cho có phải là số nguyên hay không. Trả về boolean
+- Number.parseFloat(): Chuyển đổi chuỗi đã cho thành một số dấu phẩy động
+VD: Number.parseFloat('238,21') // 238
+    Number.parseFloat('34 56 78') // 34
+    Number.parseFloat('18 is my age') // 18
+
+-Number.parseInt() : Chuyển đổi chuỗi đã cho thành một số nguyên
+
+-Number.prototype.toFixed() : Chuyển đổi và trả về chuỗi đại diện cho số đã cho, có số chữ số chính xác sau dấu thập phân
+VD: var numberObject = 1234.56789;
+
+numberObject.toFixed(); // '1235'
+numberObject.toFixed(1); // '1234.6'
+numberObject.toFixed(6); // '1234.567890'
+
+-Number.prototype.toString() : Chuyển đổi và trả về số đã cho dưới dạng chuỗi
+
+
+
+---------------------------------------------------------------------------------------------
+// -----------Mảng 
+var languaes = [
+    'Java',
+    'Java2',
+    'Java3',
+];
+
+console.log(languaes)
+// kiem tra array
+console.log(Array.isArray(languaes))
+
+
+// ----------Làm việc với mảng
+
+var languaes = [
+    'java',
+    'php',
+    'ruby'
+];
+
+var languaes2 = [
+    'dart',
+    'ruby'
+]
+
+// toString(), join()chuyển sang string
+// console.log(typeof languaes.toString())
+// nối
+// console.log(languaes.join(' - '))
+
+// pop() Xóa pt cuối mảng và trả về pt đã xóa
+// console.log(languaes.pop()) 
+
+// Push() thêm 1 hoặc nhiều ptu vào cuối mảng
+// trả về độ dài mới
+// console.log(languaes.push('giang')) 
+// console.log(languaes)
+
+// Shift() xóa ptu đầu mảng và trả về pt đầu
+// console.log(languaes.shift())
+// console.log(languaes)
+
+
+// Unshift() thêm ptu vào đầu mảng trả về ptu đầu
+// console.log(languaes.unshift('hà'))
+// console.log(languaes)
+
+// Splicing() xóa , cut
+// xóa đi 1 ptu tính từ vị trí trỏ con chuột đến mấy ptu
+// languaes.splice(1, 1)
+// xóa từ vtri1 đến 0 nghĩa là ko xóa, xong chèn từ vị trí đấy
+// languaes.splice(1, 0, 'haha')
+// languaes.splice(1, 1, 'hihi') // xóa vị trí 1 thay = thg khác
+// console.log(languaes)
+
+// concat() hợp nhất lg2 vào lg1
+// console.log(languaes.concat(languaes2))
+
+// slicing() cut chữ php từ vtri1 den het vtri2
+// console.log(languaes.slice(1, 2))
+// cut den het mang
+// console.log(languaes.slice(1))
+// copy mảng
+// console.log(languaes.slice(0))
+
+
+----------------------------------------------------------------------------------------------
+// ---------------- Object
+// var myInfo = {
+//     name: 'Giang',
+//     age: 18,
+//     add: 'Hà Noi',
+//     getName: function() {
+//         return this.name;
+//     }
+// };
+
+// Function -- > Phương thức/method
+// Others -- > Thuộc tính/property
+
+// 1. Thêm key mới vào object có sẵn
+// myInfo.email = 'giang@gmail.com'
+
+// 2. Xóa cặp key value 
+// delete myInfo.age
+
+// 3. để thêm value này vào object trên
+// var emailKey = 'email';
+// -- > [emailKey] : 'giang@gmail'
+
+
+// 4. Lấy biến add khi đặt add = biến khác
+// var myKey = 'add'
+// console.log(myInfo[myKey])
+
+// 5. Lấy value ra ngoài hoặc lấy hàm trong object ra ngoài
+// console.log(myInfo.name)
+// console.log(myInfo.getName())
+
+
+
+// -------------- Object constructor
+// function User(firstName, lastName, avatar) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.avatar = avatar;
+
+//     this.getName = function() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+//  User.prototype.className = 'f8'
+//  User.prototype.getclassName = function() {
+//     return this.className;
+//  }
+
+// // Tạo đối tượng
+// var author = new User('Giang', 'Hoang', 'Ava');
+// var user = new User('Giang', '2', 'Ava');
+
+// // Thêm thuộc tính riêng vào
+// author.tittle = 'Chia sẻ kinh nghiệm';
+// user.comment = 'Rất hay';
+
+// console.log(author);
+// console.log(user);
+
+// // This trong function gọi từ ông nào là từ ông đó
+// console.log(author.getName());
+// console.log(user.getName());
+
+
+// // -----------Prototype
+// function Student(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// }
+
+// Student.prototype.getFullName = function() {
+//     return `${this.firstName} ${this.lastName}`;
+// }
+
+// // Ví dụ khi sử dụng
+// var student = new Student('Long', 'Bui');
+
+// console.log(student.firstName);  // 'Long'
+// console.log(student.lastName);  // 'Bui'
+// console.log(student.getFullName());  // 'Long Bui'
+
+---------------------------------------------------------------------------------------------

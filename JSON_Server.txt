@@ -1,0 +1,117 @@
+npm init : Để tạo package.json
+-enter hết
+npm i json-server: để cài json-server
+tiếp: tạo 1 file db.json
+-vào file package.json thêm vào "scripts" 
+    "start": "json-server --watch db.json",
+-xong vào terminal: 
+npm start  (D:\CODE+\F8\JavaScript\JSON\json_server>)
+Hiện cái này thì OK
+Loading db.json
+  Done
+
+  Resources
+  http://localhost:3000/courses
+
+GET /courses 200 36.696 ms - 102
+
+(/course kia là trong file db.json có tạo 1 json "course")
+
+Postman REST SPI
+- Create: Post
+- Read: Get Lấy dữ liệu
+- Update: Put / Patch
+- Delete: delete 
+
+Vào postman 
+Cóp url: http://localhost:3000/courses vào
+POST: để tạo thêm mới dữ liệu, tạo xong dữ liệu vào file db.json trên visual
+GET: xem được dữ liệu
+DELETE: muốn xóa trùng nhau thì truyền lên id muốn xóa: http://localhost:3000/courses/3
+PUT: sửa thì phải truyền id lên http://localhost:3000/courses/2
+
+
+
+
+
+
+
+
+VD: 
+--------------READ
+var courseApi = 'http://localhost:3000/courses';
+
+function start() {
+    // sau khi lấy khóa học sẽ render lên trình duyệt
+    getCourses(renderCourses);
+}
+
+start();
+
+// Functions
+// Hàm lấy ra khóa học
+function getCourses(callback) {
+    fetch(courseApi)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(callback);
+
+}
+
+// render lên trình duyệt
+function renderCourses(courses) {
+    var listCoursesBlock = document.querySelector('#list-courses');
+    var htmls = courses.map(function(course) {
+        return `
+            <li>
+                <h4>${course.name}</h4>
+                <p>${course.description}</p>
+            </li>
+        `;
+    });
+    listCoursesBlock.innerHTML = htmls.join('');
+}
+
+
+CREATE
+function start() {
+    // sau khi lấy khóa học sẽ render lên trình duyệt
+    getCourses(renderCourses);
+
+    handleCreateForm();
+}
+
+function createCourse(data, callback) {
+    var options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+    fetch(courseApi, options)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(callback);
+}
+
+
+// Create 
+function handleCreateForm() {
+    var createBtn = document.querySelector("#create");
+    createBtn.onclick = function() {
+        var name = document.querySelector('input[name="name"]').value;
+        var description = document.querySelector('input[name="description"]').value;
+
+        var formData = {
+            name: name,
+            description: description
+        };
+
+        createCourse(formData, function() {
+            getCourses(renderCourses);
+        });
+    }
+}

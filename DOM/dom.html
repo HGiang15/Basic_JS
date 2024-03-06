@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap-grid.min.css">
+    <style>
+        .red {
+            color: red;
+        }
+        ul {
+            display: none;
+        }
+        input:focus ~ ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ôn tập -->
+    <h1 id="heading" class="heading">Heading-1</h1>
+    <h1 id="heading-2" class="heading">Heading-2</h1>
+    <form action="" id="form-1"></form>
+
+
+
+    <!-- 2.BÀI TẬP -->
+    <!-- <div class="products-list">
+        <div class="product">
+            <h3 class="title">HTML & CSS Pro</h3>
+            <p class="description">Cung cấp kiến thức từ cơ bản</p>
+            <button class="cta-btn">Mua ngay</button>    
+        <div>
+        <div class="product">
+            <h3 class="title">Javascript Pro</h3>
+            <p class="description">Cung cấp kiến thứct</p>
+            <button class="cta-btn">Mua ngay</button>    
+        <div>
+    </div> -->
+    <!-- ------ **3.Ul, li -->
+    <!-- <div class="box-1">
+        <ul>
+            <li>Java-1</li>
+            <li>Php-1</li>
+        </ul>
+        <p>Test para</p>
+    </div>
+    <div class="box-2">
+        <li>Java-2</li>
+        <li>Php-2</li>
+    </div> -->
+
+    <!-- **4.DOM attributes (thêm các attribute vào element) -->
+    <!-- <h2 class="headinghh-test">Heading haha</h2> -->
+
+
+    <!-- **5.innerText, textContent (lấy ra nội dung textNode và sửa) -->
+    <!-- <h3 class="heading-inner">Heading inner</h3> -->
+    <!-- Sự khác biệt inner và textContent -->
+    <!-- <h4 class="heading-inner-2">
+        <span>Heading</span>
+        <span>inner-2</span>
+    </h4> -->
+
+
+    <!-- **6.--------- innerHTML vs OuterHTML (Thêm 1 element vào trong 1 element) -->
+    <!-- <div class="boxHTML"> -->
+        <!-- <h1 title = "haha">Thêm vào h1 outer</h1> -->
+    <!-- </div> -->
+
+
+    <!-- **8.DOM CSS -->
+    <div class="box-DOMCSS">
+
+    </div>
+
+    <!-- **9.CLassList property  -->
+    <!-- <div class="box-classList">
+        <h1 class="class-list">CLASS LIST</h1>
+    </div> -->
+
+    <!-- **10.Event DOM -->
+    <h1 onclick="console.log(this)" class="event-dom">DOM events</h1>
+    <h1 class="event-dom-2">DOM events-2</h1>
+    <h1 class="event-dom-2">DOM events-3</h1>
+
+    <!-- **11. DOM events example -->
+    <!-- <input type="text">
+    <input type="checkbox">
+
+    <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option> 
+    </select> -->
+
+    <br>
+    <!-- **12. preventDefault, stopPropagation -->
+    <!-- <a href="https://fullstack.edu.vn/">
+        Học lập trình
+    </a> -->
+    <br>
+    <!-- <input placeholder="Tìm kiếm" type="text">
+    <ul>
+        <li>java</li>
+        <li>php</li>
+        <li>golang</li>
+    </ul>
+
+    <div class="prevent">
+        DIV
+        <button class="btn">Click me</button>
+    </div> -->
+
+    <!-- **13. Event listener -->
+    <button id="btn">Click nè</button>
+
+    <script src="./dom.js"></script>
+</body>
+</html>
